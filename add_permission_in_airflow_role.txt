@@ -1,0 +1,33 @@
+{
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "arn:aws:iam::047624741166:role/service-role/AWSGlueServiceRole-for-glue",
+            "Condition": {
+                "StringEquals": {
+                    "iam:PassedToService": "glue.amazonaws.com"
+                }
+            }
+}
+
+// Add this permission in your airflow IAM role to pass glue-role so that airflow 
+// dag tasks can create glue job
+
+
+        {
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::airflow-managed-rohe",
+                "arn:aws:s3:::airflow-managed-rohe/*",
+                "arn:aws:s3:::aws-glue-assets-047624741166-ap-south-1",
+                "arn:aws:s3:::aws-glue-assets-047624741166-ap-south-1/*"
+            ],
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:GetObjectVersion",
+                "s3:GetBucketAcl",
+                "s3:GetBucketLocation"
+            ]
+        }
+
+// Add these permission in the IAM role of CodeBuild
