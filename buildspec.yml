@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo "Starting build process..."
+  build:
+    commands:
+      - echo "Copying DAG files to S3..."
+      - aws s3 cp --recursive ./dags s3://airflow-managed-rohe/dags/
+      - echo "Copying requirements.txt files to S3..."
+      - aws s3 cp ./requirements.txt s3://airflow-managed-rohe/
+      - echo "Copying Glue scripts to S3..."
+      - aws s3 cp --recursive ./scripts s3://aws-glue-assets-047624741166-ap-south-1/scripts/
+  post_build:
+    commands:
+      - echo "Build and deployment process complete!!!"
