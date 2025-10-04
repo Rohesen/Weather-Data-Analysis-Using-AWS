@@ -30,4 +30,6 @@
             ]
         }
 
-// Add these permission in the IAM role of CodeBuild
+// Add these permission in the IAM role of CodeBuild    
+// ok done
+this is good and you should do it.
