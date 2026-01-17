@@ -162,7 +162,7 @@ Before deploying:
      * `airflow-managed-rohe`
      * `aws-glue-assets-047624741166-ap-south-1`
    * Redshift Cluster with `redshift-jdbc-connection`
-   * IAM Roles for Glue, Redshift, and Airflow
+   * IAM Roles for Glue, Redshift, and Airflow 
 
 2. ✅ **Configure Airflow**
 
