@@ -201,8 +201,8 @@ Before deploying:
 ## 👤 Author
 
 **Rohesen**
-☁️ Cloud Data Engineer | AWS | Airflow | Glue | Redshift 
-🔗 GitHub: [@Rohesen](https://github.com/Rohesen)
+* ☁️ Data Engineer | AWS | Airflow | Glue | Redshift 
+* 🔗 GitHub: [@Rohesen](https://github.com/Rohesen)
 
 
 ---
